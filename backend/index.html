@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body, html{
+                width:100%;
+                height:100%;
+                margin:0px;
+                padding:0px;
+                font-family: sans-serif;
+            }
+            h2{
+                text-align: center;
+            }
+            div{
+                position: absolute;
+            }
+            .the-box{
+                width:33vw;
+                height:33vw;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                box-shadow:5px 5px 15px rgba(0,0,0,.6);
+            }
+            .top{
+                width: 100%;
+                height: 50%;
+                border-radius: 0px 0px 500px 500px;
+                top: 0px;
+            }
+            .bottom{
+                width: 100%;
+                height: 50%;
+                border-radius: 500px 500px 0px 0px;
+                bottom: 0px;
+            }
+            .right{
+                width: 50%;
+                height: 100%;
+                border-radius: 500px 0px 0px 500px;
+                right: 0px;
+            }
+            .left{
+                width: 50%;
+                height: 100%;
+                border-radius: 0px 500px 500px 0px;
+                left: 0px;
+            }
+            .color{
+                width:100%;
+                height:100%;
+                z-index:-1;
+            }
+            .top:hover ~ .color{
+                background-color:chocolate;
+            }
+            .bottom:hover ~ .color{
+                background-color:cadetblue;
+            }
+            .right:hover ~ .color{
+                background-color:darkslategrey;
+            }
+            .left:hover ~ .color{
+                background-color:darkolivegreen;
+            }
+            .trigger:hover {
+                border-radius:0px;
+                width:100%;
+                height:100%;
+            }
+            .trigger:hover ~ .trigger{
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Different rollover colors depending on which side you roll through.</h2>
+        <div class="the-box">
+            <div class="trigger left"></div>
+            <div class="trigger right"></div>
+            <div class="trigger bottom"></div>
+            <div class="trigger top"></div>
+            <div class="color"></div>
+        </div>
+    </body>
+</html>

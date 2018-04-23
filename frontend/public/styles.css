@@ -1,0 +1,13 @@
+
+#acclogo{
+    /*
+    width: 200px;
+    height: 125px;
+    */
+    position: absolute;
+    right:0;
+    top:0; 
+    padding-right: 5em;
+    /*padding-left: 1000px;    */
+    
+    }
